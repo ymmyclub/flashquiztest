@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QuestionViewController.h
 //  FlashQuizTest
 //
 //  Created by Kevin on 6/27/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface QuestionViewController : UIViewController
 
 @end
-
