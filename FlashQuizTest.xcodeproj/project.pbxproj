@@ -15,6 +15,7 @@
 		0A94ECD21B3F3A5100FBDD52 /* FlashQuizTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A94ECD11B3F3A5100FBDD52 /* FlashQuizTestTests.m */; };
 		0A94ECDD1B3F3DB600FBDD52 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A94ECDC1B3F3DB600FBDD52 /* StartViewController.m */; };
 		0A94ECE21B3F3F1C00FBDD52 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A94ECE11B3F3F1C00FBDD52 /* QuestionViewController.m */; };
+		0A94ECE51B3F44B800FBDD52 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A94ECE41B3F44B800FBDD52 /* Quiz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		0A94ECDC1B3F3DB600FBDD52 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = ../StartViewController.m; sourceTree = "<group>"; };
 		0A94ECE01B3F3F1C00FBDD52 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		0A94ECE11B3F3F1C00FBDD52 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		0A94ECE31B3F44B800FBDD52 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		0A94ECE41B3F44B800FBDD52 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0A94ECDF1B3F3DC400FBDD52 /* Storyboards */,
+				0A94ECE61B3F44F800FBDD52 /* Models */,
 				0A94ECDE1B3F3DBF00FBDD52 /* Views */,
 				0A94ECC21B3F3A5100FBDD52 /* Images.xcassets */,
 				0A94ECC41B3F3A5100FBDD52 /* LaunchScreen.xib */,
@@ -138,6 +142,15 @@
 				0A94ECBF1B3F3A5100FBDD52 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		0A94ECE61B3F44F800FBDD52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A94ECE31B3F44B800FBDD52 /* Quiz.h */,
+				0A94ECE41B3F44B800FBDD52 /* Quiz.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A94ECE51B3F44B800FBDD52 /* Quiz.m in Sources */,
 				0A94ECDD1B3F3DB600FBDD52 /* StartViewController.m in Sources */,
 				0A94ECBB1B3F3A5100FBDD52 /* AppDelegate.m in Sources */,
 				0A94ECE21B3F3F1C00FBDD52 /* QuestionViewController.m in Sources */,

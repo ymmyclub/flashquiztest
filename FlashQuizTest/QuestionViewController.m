@@ -7,12 +7,13 @@
 //
 
 #import "QuestionViewController.h"
+#import "Quiz.h"
 
 @interface QuestionViewController () <UIScrollViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dynamicTriviaQuestionLabel;
-
-
+@property NSArray *questionsArray;
+@property NSIndexPath *indexPath;
 
 @end
 
@@ -21,12 +22,30 @@
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self pullTriviaQuestionsFromAPI];
+    [self updateQuestionLabelText:self.indexPath];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)pullTriviaQuestionsFromAPI
+{
+    self.questionsArray = [NSArray new];
+   [Quiz retrieveQuestions:^(NSArray *array) {
+       self.questionsArray = array;
+       NSLog(@"the array has %lu quesitons",self.questionsArray.count);
+   }];
+}
+
+- (void)updateQuestionLabelText:(NSIndexPath *)indexPath
+{
+    NSDictionary *question = [self.questionsArray objectAtIndex:indexPath.row];
+    self.dynamicTriviaQuestionLabel.text = question[@"question"];
 }
 
 /*
